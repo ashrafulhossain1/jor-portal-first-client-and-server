@@ -5,6 +5,7 @@ import AuthContext from '../../context/AuthContext/AuthContext';
 import SocialAuth from '../Shared/SocialAuth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { embed } from 'motion/react-client';
 
 const SignIn = () => {
     const { singInUser } = useContext(AuthContext)
@@ -31,10 +32,14 @@ const SignIn = () => {
                 //         console.log(res.data)
                 //     })
 
+                const user = { email: result.user.email }
+                axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                    })
 
 
 
-                
                 // navigate(state)
 
             })
