@@ -19,7 +19,6 @@ const HotJobs = () => {
                 {
                     jobs.map(job => (
                         <HotJobCard key={job._id} job={job}></HotJobCard>
-
                     ))
                 }
             </div>

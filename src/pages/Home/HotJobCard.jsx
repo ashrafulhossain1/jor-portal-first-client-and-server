@@ -32,7 +32,7 @@ const HotJobCard = ({ job }) => {
                     }
                 </div>
                 <div className="card-actions justify-end">
-                    <p>Salary: {salaryRange.min} - {salaryRange.max} {salaryRange.currency.toUpperCase()} </p>
+                    <p>Salary: {salaryRange?.min} - {salaryRange?.max} {salaryRange?.currency?.toUpperCase()} </p>
                     <Link to={`jobs/${_id}`}>
                         <button className="btn btn-primary">Apply Now</button>
                     </Link>
