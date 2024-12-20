@@ -20,6 +20,7 @@ const MyApplications = () => {
       // .then(res=>{
       //    setJobs(res.data)
       // })
+      
 
       axios.get(`http://localhost:5000/job-applications?email=${user.email}`, {withCredentials: true})
       .then(res=>{
